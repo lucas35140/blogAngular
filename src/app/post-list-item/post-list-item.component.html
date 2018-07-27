@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': love === true,
+                'list-group-item-danger': love === false}">
+
+  <div class="row">
+    <h2 class="col-xs-10" style="margin: 0; ">{{post.title}}</h2>
+    <p class="col-xs-2">{{ post.date | date: 'MM/dd/yyyy hh:mm a'}}</p>
+  </div>
+
+  <p>{{post.content}}</p>
+
+  <button (click)="setLove(true)" type="button" class="btn btn-success">Love it!!!</button>
+  <button (click)="setLove(false)" type="button" class="btn btn-danger">Don't love it!!!</button>
+
+</li>
